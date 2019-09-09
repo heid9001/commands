@@ -167,14 +167,22 @@ public class Parser {
                 break;
         }
 
-        return sb.toString() + "\n";
+        return sb.toString();
     }
 
     public void parse(BufferedReader reader) throws Exception
     {
         String line;
         while ( (line = reader.readLine()) != null ) {
-            System.out.println(parseLine(line));
+            try{
+                String result = parseLine(line);
+                if (result.length() > 0) {
+                    System.out.println(out + "\n");
+                }
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+            
         }
     }
 
