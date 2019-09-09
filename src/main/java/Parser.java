@@ -177,7 +177,7 @@ public class Parser {
             try{
                 String result = parseLine(line);
                 if (result.length() > 0) {
-                    System.out.println(out + "\n");
+                    System.out.println("Ok " + out + "\n");
                 }
             } catch (Exception e) {
                 System.out.println("Error");
